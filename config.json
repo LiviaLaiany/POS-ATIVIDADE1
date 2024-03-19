@@ -1,0 +1,214 @@
+{
+    "titulo" : "Atividade 1 POS",
+    "comando" : "php",
+    "pontos" : 10,
+    "func_expect" : "testar_regex",
+    "questoes" : [
+        {
+            "descricao" : "Questão 1",
+            "script" : "q1.php",
+            "correcoes" : [
+                {
+                    "entrada" : "10\n",
+                    "args" : "10",
+                    "args_expect" : "(?i:.*reprovado.*)",
+                    "msg_erro" : "Esperava \"reprovado\""
+                },
+                {
+                    "entrada" : "20\n",
+                    "args" : "20",
+                    "args_expect" : "(?i:.*recuperação.*)",
+                    "msg_erro" : "Esperava \"recuperação\""
+                },
+                {
+                    "entrada" : "59\n",
+                    "args" : "59",
+                    "args_expect" : "(?i:.*recuperação.*)",
+                    "msg_erro" : "Esperava \"recuperação\""
+                },
+                {
+                    "entrada" : "60\n",
+                    "args" : "60",
+                    "args_expect" : "(?i:.*aprovado.*)",
+                    "msg_erro" : "Esperava \"aprovado\""
+                },
+                {
+                    "entrada" : "100\n",
+                    "args" : "100",
+                    "args_expect" : "(?i:.*aprovado.*)",
+                    "msg_erro" : "Esperava \"aprovado\""
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 2",
+            "script" : "q2.php",
+            "correcoes" : [
+                {
+                    "entrada": "a",
+                    "args" : "a",
+                    "func_expect" : "testar_regex",
+                    "args_expect" : "(?i:vogal)",
+                    "msg_erro" : "Esperava \"vogal\""
+                },
+                {
+                    "entrada": "b",
+                    "args" : "b",
+                    "func_expect" : "testar_regex",
+                    "args_expect" : "(?i:consoante)",
+                    "msg_erro" : "Esperava \"consoante\""
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 3",
+            "script" : "q3.php",
+            "correcoes" : [
+                { 
+                    "entrada": "2024",
+                    "args" : "2024",
+                    "args_expect" : "(?i:.*sim.*)",
+                    "msg_erro" : "Esperava \"Sim\""
+                },
+                { 
+                    "entrada": "2000",
+                    "args" : "2000",
+                    "args_expect" : "(?i:.*sim.*)",
+                    "msg_erro" : "Esperava \"Sim\""
+                },
+                { 
+                    "entrada": "1900",
+                    "args" : "1900",
+                    "args_expect" : "(?i:.*não.*)",
+                    "msg_erro" : "Esperava \"Não\""
+                },
+                { 
+                    "entrada": "1973",
+                    "args" : "1973",
+                    "args_expect" : "(?i:.*não.*)",
+                    "msg_erro" : "Esperava \"Não\""
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 4",
+            "script" : "q4.php",
+            "correcoes" : [
+                { 
+                    "entrada": "5",
+                    "args" : "5",
+                    "args_expect" : ".*120.*",
+                    "msg_erro" : "Esperava \"120\""
+                },
+                { 
+                    "entrada": "3",
+                    "args" : "3",
+                    "args_expect" : ".*6.*",
+                    "msg_erro" : "Esperava \"6\""
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 5",
+            "script" : "q5.php",
+            "correcoes" : [
+                { 
+                    "entrada": "Jesus",
+                    "args" : "Jesus",
+                    "args_expect" : ".*2.*",
+                    "msg_erro" : "Esperava \"2\""
+                },
+                { 
+                    "entrada": "xyz",
+                    "args" : "xyz",
+                    "args_expect" : ".*0.*",
+                    "msg_erro" : "Esperava \"0\""
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 6",
+            "script" : "q6.php",
+            "correcoes" : [
+                { 
+                    "entrada": "Jesus",
+                    "args" : "Jesus",
+                    "args_expect" : "(?i:.*Não.*)",
+                    "msg_erro" : "Esperava \"Não\""
+                },
+                { 
+                    "entrada": "girafarig",
+                    "args" : "girafarig",
+                    "args_expect" : "(?i:.*Sim.*)",
+                    "msg_erro" : "Esperava \"Sim\""
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 7",
+            "script" : "q7.php",
+            "correcoes" : [
+                { 
+                    "entrada": "Jesus",
+                    "args" : "Jesus",
+                    "args_expect" : ".*1.*",
+                    "msg_erro" : "Esperava \"1\""
+                },
+                { 
+                    "entrada": "o rato roeu",
+                    "args" : "o rato roeu",
+                    "args_expect" : ".*3.*",
+                    "msg_erro" : "Esperava \"3\""
+                },
+                { 
+                    "entrada": "   o rato roeu  ",
+                    "args" : "   o rato roeu  ",
+                    "args_expect" : ".*3.*",
+                    "msg_erro" : "Esperava \"3\""
+                },
+                { 
+                    "entrada": "o rato   roeu",
+                    "args" : "o rato   roeu",
+                    "args_expect" : ".*3.*",
+                    "msg_erro" : "Esperava \"3\""
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 8",
+            "script" : "q8.php",
+            "correcoes" : [
+                { 
+                    "entrada": "o rato roeu\nrato\ngato",
+                    "args" : "\"o rato roeu\" \"rato\" \"gato\"",
+                    "args_expect" : ".*o gato roeu.*",
+                    "msg_erro" : "Esperava \"o gato roeu\""
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 9",
+            "script" : "q9.php",
+            "correcoes" : [
+                { 
+                    "entrada": "1 3 5\n2 4 6\n",
+                    "args" : "\"1 3 5\" \"2 4 6\"",
+                    "args_expect" : ".*1 2 3 4 5 6.*",
+                    "msg_erro" : "Esperava \"1 2 3 4 5 6\""
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 10",
+            "script" : "q10.php",
+            "correcoes" : [
+                { 
+                    "entrada": "4 3 5 2 1 6\n",
+                    "args" : "\"4 3 5 2 1 6\"",
+                    "args_expect" : ".*1 2 3 4 5 6.*",
+                    "msg_erro" : "Esperava \"1 2 3 4 5 6\""
+                }
+            ]
+        }
+   ]
+}
